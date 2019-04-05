@@ -16,8 +16,8 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav">
-            <a class="nav-item nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
-            <a class="nav-item nav-link" href="#">Saved Trips</a>
+            <a class="nav-item nav-link active" th:href="@{/}">Home <span class="sr-only">(current)</span></a>
+            <a class="nav-item nav-link" th:href="@{/mytrips}">Saved Trips</a>
             <a class="nav-item nav-link" href="#"></a>
             <a class="nav-item nav-link disabled" href="#"></a>
         </div>
@@ -288,6 +288,12 @@
   
 <!--//WORKS WITH PATH VARIABLES -->
 <script>
+
+    $( document ).ready(function() {
+      //  $('.placeOnList').remove();
+        $('.placeOnList').empty();
+    });
+
     function replaceItems (html) {
         // Replace the <fieldset id="items"> with a new one returned by server.
         $('.placeOnList').remove();
